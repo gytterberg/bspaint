@@ -21,14 +21,6 @@ const Canvas = () => {
 
   const [style, setStyle] = useState({ color: '#000000', size: 1 });
 
-  // useEffect(() => {
-  //   const canvas = canvasRef.current;
-  //   const container = canvasContainerRef.current;
-
-  //   canvas.height = container.offsetHeight;
-  //   canvas.width = container.offsetWidth;
-  // });
-
   useEffect(() => {
     const canvas = canvasRef.current;
     const ctx = canvas.getContext('2d');

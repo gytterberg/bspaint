@@ -72,10 +72,10 @@ const Palette = ({ style, setStyle }: PaletteProps) => {
           value={style.size}
           label="Pen size"
           labelId="sizeSelect"
-          onChange={(event: React.ChangeEvent<HTMLInputElement>) =>
+          onChange={(event: React.ChangeEvent<{ value: unknown }>) =>
             setStyle({
               color: style.color,
-              size: parseInt(event.target.value),
+              size: parseInt(event.currentTarget.value as string),
             })
           }
         >
