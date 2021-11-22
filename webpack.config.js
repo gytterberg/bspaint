@@ -28,22 +28,22 @@ module.exports = {
         use: 'ts-loader',
         exclude: /node_modules/,
       },
-      {
-        test: /\.css$/,
-        use: [
-          {
-            loader: 'style-loader',
-          },
-          {
-            loader: 'css-loader',
-          },
-        ],
-      },
+      // {
+      //   test: /\.css$/,
+      //   use: [
+      //     {
+      //       loader: 'style-loader',
+      //     },
+      //     {
+      //       loader: 'css-loader',
+      //     },
+      //   ],
+      // },
     ],
   },
   plugins: [
     new HtmlWebPackPlugin({
-      template: path.join(__dirname, 'src', 'client', 'index.tsx'),
+      template: path.join(__dirname, 'src', 'client', 'index.html'),
     }),
   ],
 };
