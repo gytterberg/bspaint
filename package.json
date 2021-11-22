@@ -4,6 +4,7 @@
   "description": "Hackathon paint app!",
   "main": "src/server/",
   "scripts": {
+    "start": "npm run start-server",
     "start-dev": "npm run build-dev & npm run start-server",
     "build": "npm run start-server & webpack --mode=production",
     "build-dev": "webpack -- --watch --mode=development",
