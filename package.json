@@ -4,9 +4,8 @@
   "description": "Hackathon paint app!",
   "main": "src/server/",
   "scripts": {
-    "start": "webpack-dev-server --mode=development --open --hot",
     "start-dev": "npm run build-dev & npm run start-server",
-    "build": "npm run start-dev",
+    "build": "npm run start-server & webpack",
     "build-dev": "webpack -- --watch --mode=development",
     "start-server": "nodemon src/server/index.ts"
   },
