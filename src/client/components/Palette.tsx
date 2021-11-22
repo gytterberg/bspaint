@@ -75,12 +75,16 @@ const Palette = ({ style, setStyle }: PaletteProps) => {
           onChange={(event: React.ChangeEvent<{ value: unknown }>) =>
             setStyle({
               color: style.color,
-              size: parseInt(event.currentTarget.value as string),
+              size: parseInt(event.target.value as string),
             })
           }
         >
           {[1, 5, 10].map((size) => {
-            return <MenuItem value={size}>{size}</MenuItem>;
+            return (
+              <MenuItem key={size} value={size}>
+                {size}
+              </MenuItem>
+            );
           })}
         </Select>
       </>

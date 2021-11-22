@@ -1,18 +1,19 @@
 const path = require('path');
-const HtmlWebPackPlugin = require('html-webpack-plugin');
+// const HtmlWebPackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   output: {
-    path: path.resolve(__dirname, 'build'),
+    path: path.resolve(__dirname, 'public'),
     filename: 'bundle.js',
   },
   resolve: {
-    modules: [path.join(__dirname, 'src'), 'node_modules'],
+    modules: [path.join(__dirname), 'node_modules'],
     alias: {
       react: path.join(__dirname, 'node_modules', 'react'),
     },
     extensions: ['.tsx', '.ts', '.js'],
   },
+  entry: path.join(__dirname, 'src', 'client', 'index.tsx'),
   module: {
     rules: [
       {
@@ -40,9 +41,9 @@ module.exports = {
       },
     ],
   },
-  plugins: [
-    new HtmlWebPackPlugin({
-      template: './src/index.html',
-    }),
-  ],
+  // plugins: [
+  //   new HtmlWebPackPlugin({
+  //     template: path.join(__dirname, 'src', 'client', 'index.tsx'),
+  //   }),
+  // ],
 };
