@@ -1,5 +1,5 @@
 const path = require('path');
-// const HtmlWebPackPlugin = require('html-webpack-plugin');
+const HtmlWebPackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   output: {
@@ -41,9 +41,9 @@ module.exports = {
       },
     ],
   },
-  // plugins: [
-  //   new HtmlWebPackPlugin({
-  //     template: path.join(__dirname, 'src', 'client', 'index.tsx'),
-  //   }),
-  // ],
+  plugins: [
+    new HtmlWebPackPlugin({
+      template: path.join(__dirname, 'src', 'client', 'index.tsx'),
+    }),
+  ],
 };
