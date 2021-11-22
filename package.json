@@ -6,7 +6,7 @@
   "scripts": {
     "start": "npm run start-server",
     "start-dev": "npm run build-dev & npm run start-server",
-    "build": "npm run start-server & webpack --mode=production",
+    "build": "webpack --mode=production",
     "build-dev": "webpack -- --watch --mode=development",
     "start-server": "nodemon src/server/index.ts"
   },
