@@ -16,13 +16,13 @@ module.exports = {
   entry: path.join(__dirname, 'src', 'client', 'index.tsx'),
   module: {
     rules: [
-      {
-        test: /\.(js|jsx)$/,
-        exclude: /node_modules/,
-        use: {
-          loader: 'babel-loader',
-        },
-      },
+      // {
+      //   test: /\.(js|jsx)$/,
+      //   exclude: /node_modules/,
+      //   use: {
+      //     loader: 'babel-loader',
+      //   },
+      // },
       {
         test: /\.tsx?$/,
         use: 'ts-loader',
