@@ -6,9 +6,9 @@
   "scripts": {
     "start": "npm run start-server",
     "start-dev": "npm run build-dev & npm run start-server",
-    "build": "webpack --mode=production",
+    "build": "webpack --mode=production & npx tsc",
     "build-dev": "webpack -- --watch --mode=development",
-    "start-server": "nodemon src/server/index.ts"
+    "start-server": "nodemon src/server/index.js"
   },
   "author": "Gabriel Ytterberg",
   "license": "ISC",
